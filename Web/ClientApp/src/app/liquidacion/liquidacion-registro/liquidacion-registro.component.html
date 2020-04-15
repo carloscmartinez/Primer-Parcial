@@ -1,0 +1,36 @@
+<div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Registro de Personas</h2>
+                <form >
+                                    
+                    <div class="form-group">
+                        <label>Numero del Contrato</label>
+                        <input type="text"  name="numeroContrato"  [(ngModel)]="liquidacion.numeroContrato" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Objeto del Contrato</label>
+                        <input type="text"  name="objetoContrato"  [(ngModel)]="liquidacion.objetoContrato" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Valor del Contrato</label>
+                        <input type="number"  name="valorContrato"  [(ngModel)]="liquidacion.valorContrato" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Apoya Emergencia</label>
+                         <select name="apoyaEmergencia" [(ngModel)]="liquidacion.apoyaEmergencia" class="form-control">
+                         <option >SI</option>
+                         <option >NO</option>
+                         </select>
+                    </div>
+    
+                    
+                    <div class="text-center">
+                        <button class="btn btn-primary mr-1"(click)="add()">Register</button>
+                        <button class="btn btn-secondary" type="reset">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    

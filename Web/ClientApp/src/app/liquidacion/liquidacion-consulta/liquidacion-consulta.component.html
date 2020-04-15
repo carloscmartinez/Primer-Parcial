@@ -1,0 +1,30 @@
+<div class="row">
+        <div class="col-6">
+          <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Type to filter">
+        </div>
+      </div>
+      <hr>
+      
+      <table class="table table-striped" *ngIf='liquidaciones && liquidaciones.length'>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Numero del Contrato</th>
+            <th scope="col">Objeto del Contrato </th>
+            <th scope="col">Valor del Contrato</th>
+            <th scope="col">Apoya Emergencia</th>
+            <th scope="col">Valor de Estampilla</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let liquidacion of liquidaciones; index as i ">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ liquidacion.numeroContrato }} </td>
+            <td>{{ liquidacion.objetoContrato }}</td>
+            <td>{{ liquidacion.valorContrato }}</td>
+            <td>{{ liquidacion.apoyaEmergencia }}</td>
+            <td>{{ liquidacion.valorEstampilla }}</td>
+          </tr>
+        </tbody>
+      </table>
+    
